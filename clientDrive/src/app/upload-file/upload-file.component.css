@@ -1,0 +1,24 @@
+h3 {
+    margin-top: 50px;
+    margin-right: 60px;
+    color: snow;
+}
+
+.browse-button {
+    margin-top: 25%;
+    align-items: center;
+    margin-right: 60px;
+    margin-left: -225px;
+    background-color: #E1Bee7; 
+    border: none;
+} 
+
+.upload-btn {
+    margin-left: 46%;
+    background-color: #Ea80fc;
+    border-color: black;
+}
+
+.upload-table {
+    margin-top: 2px;
+}

@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import '~alertifyjs/build/css/alertify.css';
+
+/* override ngx-file-drop css */
+.ngx-file-drop__drop-zone {
+    height: 170px !important;
+    width: 14cm !important;
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+    border: 0.015cm rgb(15, 43, 41) !important;
+    border-style: inset !important;
+    background-color: rgb(121, 122, 122);
+    text-align: center  !important;
+    margin-left: 31% !important;
+    margin:none !important;
+}
+
+html , body{
+    background-color: rgb(19, 18, 18) !important;
+}

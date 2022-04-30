@@ -1,0 +1,21 @@
+<div class="center">
+<div class="card">
+
+ <h6 class="card-title">
+    <div class="title">
+        {{ this.file.name }}
+    </div>
+
+    <button class="delete-file-button" (click)="deleteFile()">
+        <fa-icon [icon] = "faTrash" style="color: #AD1457"></fa-icon>
+    </button>
+
+    <br>
+    <small class="card-subtitle mb-2 text-muted">
+        {{ this.file.size | filesize }}
+    </small>
+  
+ </h6>
+
+</div> 
+</div>

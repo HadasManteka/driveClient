@@ -1,0 +1,60 @@
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-family: 'Numans', sans-serif;
+}
+    
+.container{
+height: 100%;
+align-content: center;
+}
+
+.card{
+height: 350px;
+margin-top: 2cm;
+margin-bottom: auto;
+width: 400px;
+background-color: rgba(92, 90, 90, 0.5) !important;
+}
+
+.social_icon span{
+    font-size: 60px;
+    margin-left: 10px;
+}
+
+.card-header h3{
+    color: white;
+}
+
+.social_icon{
+    position: absolute;
+    right: 20px;
+    top: -45px;
+}
+
+.input-group-prepend span{
+    width: 46px;
+    color: black;
+    border:0 !important;
+}
+
+input:focus{
+    outline: 0 0 0 0  !important;
+    box-shadow: 0 0 0 0 !important;
+
+}
+
+.login_btn{
+    color: rgb(245, 241, 233);
+    background-color: #aa00ff;
+    width: 100px;
+}
+
+.login_btn:hover{
+    background-color: rgb(175, 77, 192);
+}
+
+.links{
+    color: white;
+}

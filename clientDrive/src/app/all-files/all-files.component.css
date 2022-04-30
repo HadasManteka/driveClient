@@ -1,0 +1,118 @@
+
+.active-purple-2 input.form-control[type=text]:focus:not([readonly]) {
+  border-bottom: 2px solid #ce93d8;
+  box-shadow: 0 1px 0 0 #ce93d8;
+}
+.active-purple input.form-control[type=text] {
+  border-bottom: 2px solid #ce93d8;
+  box-shadow: 0 1px 0 0 #ce93d8;
+}
+
+.active-purple .fa, .active-purple-2 .fa {
+  color: #ce93d8;
+}
+
+::placeholder {
+    color:rgb(236, 236, 236);
+}
+
+:-ms-input-placeholder {
+  color:rgb(236, 236, 236);
+}
+ 
+input:focus {
+    color:white;
+}
+
+.searchBox {
+  width: 6.5cm; 
+  text-decoration-color: blanchedalmond; 
+  background-color: rgb(19, 18, 18); 
+  border-top: none; 
+  border-right: none; 
+  border-left: none;
+}
+
+.card-group {
+  margin-right: 2cm !important; 
+  margin-left: 4cm !important;
+}
+
+.card {
+width: 1.7cm !important; 
+height: 2.8cm !important; 
+margin-right: 1.5cm !important; 
+margin-top: 1.5cm !important; 
+background-color: rgb(19, 18, 18) !important;
+}
+
+.card-text {
+  color: white !important; 
+  font-size: 14px !important; 
+  margin-bottom: 1px !important; 
+  height: 0.7cm !important; 
+  overflow: hidden !important;
+}
+
+.card:hover{
+cursor: pointer !important; 
+}
+
+.image {
+  color: rgb(221, 185, 38);
+}
+
+.alt {
+  color : rgb(212, 211, 211);
+}
+
+.word {
+  color: rgb(68, 70, 211);
+}
+
+.excel {
+  color: rgb(39, 167, 81);
+}
+
+.pdf {
+  color: rgb(226, 56, 13);
+}
+
+.file {
+  color: rgb(223, 223, 223);
+}
+
+.audio {
+  color: rgb(72, 148, 135);
+}
+
+.video {
+  color: rgb(168, 226, 141);
+}
+
+.txt {
+  color:rgb(190, 190, 190);
+}
+
+.archive {
+  color:rgb(233, 111, 202);
+}
+
+.power-point {
+  color:rgb(228, 74, 68);
+}
+
+.narrow {
+  display: inline-block !important;
+  color:white !important; 
+  margin-top: 10% !important;
+}
+
+.page-number {
+  position:absolute;
+  color: white; 
+  padding-bottom: 0.5cm; 
+  text-align: center; 
+  left: 50%; 
+  top:85%
+}

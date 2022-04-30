@@ -1,0 +1,28 @@
+ .delete-file-button {
+    float: right;
+    display: inline-block;
+    margin-top: 8px;
+    margin-right: 5px;
+}
+.card {
+    background-color:rgb(184, 181, 181); 
+    margin-left: 31%; 
+    height: 50px !important; 
+    width: 14cm !important;
+}
+
+.card-title {
+    margin-left: 20px !important;
+}
+
+.title {
+    float:left !important; 
+    overflow: hidden !important; 
+    width: 90% !important; 
+    height: 23px !important;
+}
+
+.card-subtitle {
+    float: left !important; 
+    margin-top: 3px !important;
+}

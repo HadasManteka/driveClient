@@ -1,0 +1,44 @@
+<div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand">Team1Drive</a>
+      
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/upload" >Upload </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/allFiles">Files</a>
+          </li>
+        </ul>
+
+        <div *ngIf="isLogin()">
+          
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item"> 
+            <a class="nav-link" (click)="logout()">
+              <div style="color:rgb(230, 230, 230); text-align:center;">
+                hi {{getName()}}
+               </div>
+
+              Logout 
+
+            <div *ngIf = "loader == true">
+              <div class="d-flex justify-content-center text-light">
+                <div class="spinner-border spinner-border-sm" role="status">
+                </div>
+              </div>
+            </div>
+            </a>
+          </li>
+        </ul>
+        </div>
+        </div> 
+    </nav>
+
+    <router-outlet></router-outlet>
+</div>
+

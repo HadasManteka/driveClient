@@ -1,0 +1,28 @@
+<div >
+    <ngx-file-drop dropZoneLabel="Drop files here" (onFileDrop)="dropped($event)" >
+        <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+          <h3>Drag & Drop a file <br>
+            <h6>or</h6>
+        </h3>
+          <button type="button" class="btn btn-light browse-button" (click)="openFileSelector()">Browse Files</button>
+        </ng-template>
+      
+    </ngx-file-drop>
+    
+    <div  *ngFor="let item of files; let i=index" class="upload-table">
+        <app-single-file-to-upload [file]="item" [fileIndex]="i" (deleteAttachment)="deleteAttachment($event)"></app-single-file-to-upload>
+    </div>
+<br>
+    <div *ngIf="files.length > 0">
+            <button type="button" class="btn btn-light upload-btn" (click)="upload()">UPLOAD</button>
+    </div>
+
+    <div *ngIf = "loader == true">
+        <br>
+        <div class="d-flex justify-content-center text-light">
+        <div class="spinner-border" role="status">
+        </div>
+        </div>
+    </div>
+    
+</div>

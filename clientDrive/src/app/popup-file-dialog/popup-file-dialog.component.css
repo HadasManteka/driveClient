@@ -1,0 +1,9 @@
+.modal-title {
+    overflow-wrap: break-word !important; 
+    width: 95% !important;
+}
+
+.modal-content {
+    background-color: rgb(87, 87, 87) !important; 
+    color: white !important;
+}
