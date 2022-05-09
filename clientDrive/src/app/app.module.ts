@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { SingleFileComponent } from './single-file/single-file.component';
 import { UploadFileComponent } from './upload-file/upload-file.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PopupFileDialogComponent } from './popup-file-dialog/popup-file-dialog.component';
@@ -23,7 +22,6 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
   declarations: [
     AppComponent,
     LoginComponent,
-    SingleFileComponent,
     UploadFileComponent,
     NavbarComponent,
     PopupFileDialogComponent,

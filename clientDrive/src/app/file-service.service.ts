@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHandler, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Ifile } from './ifile';
 // @ts-ignore
 import * as alertify from 'alertifyjs';
@@ -44,10 +44,16 @@ export class FileServiceService {
 
   uploadFiles(files: File[]) {
     const formData = new FormData();
-    files.forEach((file) => { formData.append("uploadFiles", file)});
+    files.forEach((file) => { 
+      formData.append("uploadFiles", file); 
+    });
 
-    return this.http.post<any>(environment.serverUrl + "/api/upload",
-                   formData, {withCredentials: true, reportProgress: true});
+    let name = localStorage.getItem('token');
+    let paramss = new HttpParams();
+    paramss.append("userName", name as string);
+
+    return this.http.post<any>(environment.serverUrl + "/api/upload/" + name,
+    formData, {withCredentials: true, reportProgress: true});
   }
 
   getFiles() {

@@ -4,4 +4,5 @@ export interface Ifile {
     location: string;
     timestamp: number;
     extension: string;
+    user: string
 }

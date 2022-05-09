@@ -14,16 +14,19 @@
             <br>
           </div>
           Date: {{file.timestamp | date:'dd/MM/yyyy'}}
+          <br>
+          By: {{file.user}}
         </div>
 
         <div class="modal-footer">
           <button type="button" style="background-color: #cc7dda;" class="btn btn-secondary" (click)="download()">download</button>
           
+          <div *ngIf ="getName()">
           <button type="button" style="background-color: rgb(226, 226, 226);" class="btn btn-secondary" 
                   data-dismiss="modal" aria-label="Close" (click)="deleteFile()">
             <fa-icon [icon] = "faTrash" style="color: #c97cd6"></fa-icon>
           </button>
-          
+        </div>
         </div>
 
         <div *ngIf = "loader == true">

@@ -35,6 +35,10 @@ export class PopupFileDialogComponent implements OnInit {
     }
   }
 
+  getName() {
+    return localStorage.getItem('token') === this.file.user;
+  }
+
   getIconClass() {
     return this.fileService.getIconClassByExtension(this.file.extension.toLowerCase());
   }
