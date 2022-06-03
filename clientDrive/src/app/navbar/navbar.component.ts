@@ -31,14 +31,14 @@ export class NavbarComponent implements OnInit {
   logout() : void {
     this.loader = true;
     this.userService.logout()
-    .subscribe(
-      (res) => {
+    .subscribe({
+      next: (res) => {
         this.loader = false;
         localStorage.setItem('isLoggedIn', "false");
         localStorage.removeItem('token');
         this.router.navigate(["/login"]);
       },
-      (err) => {
+      error: (err) => {
         this.loader = false;
         if (err.status == 0) {
           alertify.error("error with logout").dismissOthers();
@@ -46,6 +46,6 @@ export class NavbarComponent implements OnInit {
           alertify.error(err.error._message + " with logout").dismissOthers();
         }
       }
-    );;
+  });;
   }
 }

@@ -1,6 +1,5 @@
 import { Component, OnInit, Output, Input, EventEmitter, SecurityContext } from '@angular/core';
 import { Ifile } from '../ifile';
-import { Subject, Observable } from 'rxjs';
 import {FileServiceService} from '../file-service.service';
 import {faTrash} from '@fortawesome/free-solid-svg-icons';
 import {Response} from '../response';
@@ -67,33 +66,31 @@ export class PopupFileDialogComponent implements OnInit {
   download() {
     this.loader = true;
     this.fileService.downloadFile(this.file)
-    .subscribe(
-      (res  ) => {
-        // alert(res.type);   
+    .subscribe({
+      next: (res) => { 
         this.loader = false;
         alertify.success("download success");
         const blob = new Blob([res], {type: 'application/octet-stream'});
         saveAs(blob, this.file.fileName);
       },
-      (err) => {
+      error: (err) => {
           alertify.error("error with download");
           this.loader = false;
       }
-    );
+  });
   }
   
 
   deleteFile() {
     this.loader = true;
     this.fileService.deleteFile(this.file)
-    .subscribe(
-      (res: Response) => {
+    .subscribe({
+      next:(res: Response) => {
         this.loader = false;
         this.deleteFileFromArray.emit();
         alertify.success(res._message);
-        // this.close();
       },
-      (err) => {
+      error: (err) => {
         if (err.status == 0) {
           alertify.error("server error!");
       } else {
@@ -102,7 +99,7 @@ export class PopupFileDialogComponent implements OnInit {
 
         this.loader = false;
       }
-    );
+  });
     ;
   }
 }

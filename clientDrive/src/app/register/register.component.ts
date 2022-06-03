@@ -51,13 +51,13 @@ export class RegisterComponent implements OnInit {
       this.loader = true;
       let userDetails : Iuser= { name: this.form['name'].value, password: this.form['password'].value};
       this.userService.register(userDetails)
-      .subscribe(
-      (res) => {
+      .subscribe({
+      next:(res) => {
         this.loader = false;
         alertify.success("register success ");
         this.router.navigate([this.returnUrl]);
       },
-      (err) => {
+      error:(err) => {
         this.loader = false;
         if (err.status == 0 || err.status == 500) {
           alertify.error("server error!");
@@ -65,7 +65,7 @@ export class RegisterComponent implements OnInit {
           this.message = err.error._message;
         }
       }
-    );;
+    });;
     }
   }
 }
